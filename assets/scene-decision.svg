@@ -1,0 +1,66 @@
+<svg width="960" height="1240" viewBox="0 0 960 1240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="60" x2="830" y2="1160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF6EE"/>
+      <stop offset="1" stop-color="#EBDAC4"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8EAA8A"/>
+      <stop offset="1" stop-color="#CFE1C9"/>
+    </linearGradient>
+    <filter id="shadow" x="180" y="122" width="604" height="980" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="34"/>
+      <feGaussianBlur stdDeviation="36"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0784314 0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0.15 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4_2"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4_2" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="1240" rx="40" fill="url(#bg)"/>
+  <circle cx="188" cy="202" r="124" fill="#8EAA8A" fill-opacity="0.14"/>
+  <circle cx="786" cy="980" r="150" fill="#D7A252" fill-opacity="0.12"/>
+
+  <text x="128" y="120" fill="#245F74" font-family="Avenir Next, PingFang SC, sans-serif" font-size="26" font-weight="700" letter-spacing="0.16em">PATH 03</text>
+  <text x="128" y="186" fill="#141313" font-family="Iowan Old Style, Georgia, Songti SC, serif" font-size="64" font-weight="700" letter-spacing="-0.05em">Decision Flow</text>
+  <text x="128" y="238" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="26">默认方案、候选切换和继续追问放在同一个工作台里。</text>
+
+  <g filter="url(#shadow)" transform="translate(278 172)">
+    <rect width="404" height="800" rx="54" fill="#141313"/>
+    <rect x="16" y="16" width="372" height="768" rx="40" fill="#F9F3E9"/>
+    <rect x="126" y="24" width="152" height="18" rx="9" fill="#E7DAC4"/>
+
+    <text x="42" y="84" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16">当前事项</text>
+    <text x="42" y="126" fill="#141313" font-family="Iowan Old Style, Georgia, Songti SC, serif" font-size="40" font-weight="700">午餐工作台</text>
+
+    <rect x="36" y="154" width="332" height="158" rx="32" fill="url(#accent)"/>
+    <text x="58" y="196" fill="#245F74" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16" font-weight="700">默认建议</text>
+    <text x="58" y="240" fill="#141313" font-family="Avenir Next, PingFang SC, sans-serif" font-size="28" font-weight="700">柠檬鸡腿能量碗</text>
+    <text x="58" y="276" fill="#37563A" font-family="Avenir Next, PingFang SC, sans-serif" font-size="18">预算 ¥32 · 预计 24 分钟送达 · 轻负担</text>
+    <rect x="58" y="286" width="92" height="34" rx="17" fill="#FFFDF8" fill-opacity="0.7"/>
+    <rect x="160" y="286" width="84" height="34" rx="17" fill="#FFFDF8" fill-opacity="0.7"/>
+    <text x="104" y="308" fill="#245F74" font-family="Avenir Next, PingFang SC, sans-serif" font-size="14" font-weight="700" text-anchor="middle">低油</text>
+    <text x="202" y="308" fill="#245F74" font-family="Avenir Next, PingFang SC, sans-serif" font-size="14" font-weight="700" text-anchor="middle">高蛋白</text>
+
+    <rect x="36" y="338" width="332" height="136" rx="30" fill="#FFFDF8"/>
+    <text x="58" y="374" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16">候选列表</text>
+    <rect x="58" y="396" width="288" height="28" rx="14" fill="#141313"/>
+    <text x="84" y="415" fill="#FFFDF8" font-family="Avenir Next, PingFang SC, sans-serif" font-size="15">蜜汁鸡腿超级碗 · ¥35</text>
+    <rect x="58" y="434" width="288" height="28" rx="14" fill="#EFE3D2"/>
+    <text x="84" y="453" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="15">豆腐谷物轻食碗 · ¥30</text>
+
+    <rect x="36" y="500" width="332" height="156" rx="30" fill="#141313"/>
+    <rect x="52" y="520" width="210" height="54" rx="24" fill="#FFFDF8"/>
+    <text x="72" y="546" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="15">assistant</text>
+    <text x="72" y="566" fill="#141313" font-family="Avenir Next, PingFang SC, sans-serif" font-size="17">预算不变的话，要不要我再换一个更热一点的？</text>
+    <rect x="140" y="590" width="176" height="46" rx="22" fill="#245F74"/>
+    <text x="228" y="619" fill="#FFFDF8" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16" font-weight="600" text-anchor="middle">那就换个更热的</text>
+
+    <rect x="36" y="682" width="332" height="50" rx="25" fill="#FFFDF8"/>
+    <text x="68" y="713" fill="#8A847D" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16">继续告诉我你的偏好或约束</text>
+    <circle cx="330" cy="707" r="17" fill="#245F74"/>
+    <path d="M324 707H336M330 701V713" stroke="#FFFDF8" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

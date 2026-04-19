@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Life Assistant Showcase Demo"
+    />
+    <title>Life Assistant Showcase</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top">Life Assistant</a>
+        <nav class="site-nav" aria-label="Section navigation">
+          <a href="#moments">Moments</a>
+          <a href="#structure">Structure</a>
+          <a href="#status">Status</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow">Public showcase repository</p>
+            <h1>一个把日常决策做成产品体验的 AI 助理原型。</h1>
+            <p class="hero-text">
+              它关注的不是一次性回答，而是长期理解、默认判断和自然承接。
+              当前公开层只保留产品叙事、静态 demo 和高层系统思路。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#moments">查看三条路径</a>
+              <a class="button button-secondary" href="#structure">看系统结构</a>
+            </div>
+          </div>
+
+          <div class="hero-art" data-reveal>
+            <div class="glow glow-a"></div>
+            <div class="glow glow-b"></div>
+            <img
+              src="../assets/cover-poster.svg"
+              alt="Life Assistant showcase cover"
+            />
+          </div>
+        </section>
+
+        <section class="intro" data-reveal>
+          <p>
+            这不是“把聊天能力塞进 app” 的尝试，而是把
+            <strong>目标、约束、判断、承接和执行边界</strong>
+            做成一个可被解释、可被演示、可逐步扩展的产品原型。
+          </p>
+        </section>
+
+        <section class="moments" id="moments">
+          <article class="moment" data-reveal>
+            <div class="moment-copy">
+              <p class="moment-index">01</p>
+              <h2>Onboarding 先建立关系，再收信息。</h2>
+              <p>
+                首次进入不是一张巨大的配置表，而是一段短路径建档：确认你是谁、你在哪里、你的节奏怎样，以及助理应该用什么方式与你建立关系。
+              </p>
+              <ul class="bullet-list">
+                <li>最小激活优先，不强求一步收全</li>
+                <li>长期稳定信息先于临时状态</li>
+                <li>模型能力可后置开启</li>
+              </ul>
+            </div>
+            <figure class="moment-visual">
+              <img
+                src="../assets/scene-onboarding.svg"
+                alt="Onboarding scene"
+              />
+            </figure>
+          </article>
+
+          <article class="moment moment-reverse" data-reveal>
+            <div class="moment-copy">
+              <p class="moment-index">02</p>
+              <h2>首页只接住当下最该处理的一件事。</h2>
+              <p>
+                “今天”页不追求把所有内容同时展示出来，而是先把当前最值得注意的一件事放到前面，再决定是原地完成、查看详情还是继续交给 assistant。
+              </p>
+              <ul class="bullet-list">
+                <li>注意力收敛优先于信息堆砌</li>
+                <li>单步动作优先原地承接</li>
+                <li>复杂修改再升级为对话</li>
+              </ul>
+            </div>
+            <figure class="moment-visual">
+              <img
+                src="../assets/scene-today.svg"
+                alt="Today scene"
+              />
+            </figure>
+          </article>
+
+          <article class="moment" data-reveal>
+            <div class="moment-copy">
+              <p class="moment-index">03</p>
+              <h2>单个决策场景要能被看见、被修改、被继续执行。</h2>
+              <p>
+                公开 demo 选了午餐工作台作为代表场景：系统先给一份稳妥默认，再允许用户继续问、继续改，而不是把所有复杂度留在一串聊天里。
+              </p>
+              <ul class="bullet-list">
+                <li>默认方案是起点，不是唯一答案</li>
+                <li>候选来自本地模拟内容</li>
+                <li>执行前的确认边界保持可解释</li>
+              </ul>
+            </div>
+            <figure class="moment-visual">
+              <img
+                src="../assets/scene-decision.svg"
+                alt="Decision scene"
+              />
+            </figure>
+          </article>
+        </section>
+
+        <section class="structure" id="structure">
+          <div class="structure-copy" data-reveal>
+            <p class="eyebrow">System structure</p>
+            <h2>Assistant 负责治理与承接，skill 负责场景能力。</h2>
+            <p>
+              对外只保留高层结构：assistant 是宿主，skill 是能力包，proposal 需要经过治理才能进入正式写回。这样做的目的不是复杂化工程，而是让“谁在判断、谁在执行、谁对状态负责”始终清楚。
+            </p>
+          </div>
+          <figure class="structure-visual" data-reveal>
+            <img
+              src="../assets/architecture-overview.svg"
+              alt="Architecture overview"
+            />
+          </figure>
+        </section>
+
+        <section class="status" id="status" data-reveal>
+          <div class="status-line">
+            <span>公开层包含</span>
+            <strong>Vision / Demo / Architecture / Static Demo</strong>
+          </div>
+          <div class="status-line">
+            <span>公开层不包含</span>
+            <strong>完整源码、私有 provider、内部 contract</strong>
+          </div>
+          <div class="status-line">
+            <span>演示边界</span>
+            <strong>本地模拟数据，稳定可浏览，不依赖私有环境</strong>
+          </div>
+        </section>
+
+        <section class="closing" data-reveal>
+          <p class="eyebrow">Repository intent</p>
+          <h2>这是一个对外展示层，不是完整开源主仓。</h2>
+          <p>
+            它保留方向、体验和系统边界，好让项目能够被介绍、被讨论、被进一步验证；而正式实现仍然留在私有主仓继续迭代。
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<svg width="960" height="1240" viewBox="0 0 960 1240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="140" y1="80" x2="820" y2="1160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF6EE"/>
+      <stop offset="1" stop-color="#EDE0CD"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#245F74"/>
+      <stop offset="1" stop-color="#6E9CAA"/>
+    </linearGradient>
+    <filter id="shadow" x="178" y="124" width="604" height="960" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="34"/>
+      <feGaussianBlur stdDeviation="36"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0784314 0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0.15 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_2"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_2" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="1240" rx="40" fill="url(#bg)"/>
+  <circle cx="170" cy="180" r="120" fill="#245F74" fill-opacity="0.12"/>
+  <circle cx="784" cy="222" r="110" fill="#D7A252" fill-opacity="0.16"/>
+
+  <text x="130" y="120" fill="#245F74" font-family="Avenir Next, PingFang SC, sans-serif" font-size="26" font-weight="700" letter-spacing="0.16em">PATH 01</text>
+  <text x="128" y="186" fill="#141313" font-family="Iowan Old Style, Georgia, Songti SC, serif" font-size="64" font-weight="700" letter-spacing="-0.05em">Onboarding</text>
+  <text x="130" y="238" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="26">先建立关系，再完成最小激活。</text>
+
+  <g filter="url(#shadow)" transform="translate(278 172)">
+    <rect width="404" height="780" rx="54" fill="#141313"/>
+    <rect x="16" y="16" width="372" height="748" rx="40" fill="#F8F1E5"/>
+    <rect x="126" y="24" width="152" height="18" rx="9" fill="#E7DAC4"/>
+    <rect x="36" y="62" width="336" height="154" rx="34" fill="url(#hero)"/>
+    <text x="52" y="106" fill="#F6EFE4" font-family="Avenir Next, PingFang SC, sans-serif" font-size="18" font-weight="700" letter-spacing="0.08em">LET'S GET TO KNOW YOU</text>
+    <text x="52" y="154" fill="#FFFDF8" font-family="Iowan Old Style, Georgia, Songti SC, serif" font-size="34" font-weight="700">让我们先相互了解下吧</text>
+    <text x="52" y="188" fill="#E7EEF0" font-family="Avenir Next, PingFang SC, sans-serif" font-size="18">我会先记住最关键的信息，这样才能开始替你安排。</text>
+
+    <rect x="36" y="244" width="336" height="88" rx="28" fill="#FFFDF8"/>
+    <text x="58" y="274" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16">给我起个名字吧</text>
+    <text x="58" y="310" fill="#141313" font-family="Avenir Next, PingFang SC, sans-serif" font-size="28" font-weight="600">生活助理</text>
+
+    <text x="36" y="376" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16">你期望我怎么表达</text>
+    <rect x="36" y="398" width="100" height="42" rx="21" fill="#141313"/>
+    <rect x="146" y="398" width="100" height="42" rx="21" fill="#245F74" fill-opacity="0.12"/>
+    <rect x="256" y="398" width="116" height="42" rx="21" fill="#245F74" fill-opacity="0.12"/>
+    <text x="86" y="425" fill="#FFFDF8" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16" font-weight="600" text-anchor="middle">简洁</text>
+    <text x="196" y="425" fill="#245F74" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16" font-weight="600" text-anchor="middle">温和</text>
+    <text x="314" y="425" fill="#245F74" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16" font-weight="600" text-anchor="middle">更主动</text>
+
+    <rect x="36" y="478" width="336" height="112" rx="30" fill="#FFFDF8"/>
+    <text x="58" y="514" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16">先告诉我该怎么称呼你</text>
+    <text x="58" y="552" fill="#141313" font-family="Avenir Next, PingFang SC, sans-serif" font-size="26" font-weight="600">小宇</text>
+    <text x="58" y="580" fill="#8A847D" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16">上海静安寺 · 上班族 · ENTJ</text>
+
+    <rect x="36" y="620" width="160" height="56" rx="24" fill="#FFFDF8"/>
+    <rect x="212" y="620" width="160" height="56" rx="24" fill="#FFFDF8"/>
+    <text x="116" y="654" fill="#141313" font-family="Avenir Next, PingFang SC, sans-serif" font-size="18" font-weight="600" text-anchor="middle">07:00 起床</text>
+    <text x="292" y="654" fill="#141313" font-family="Avenir Next, PingFang SC, sans-serif" font-size="18" font-weight="600" text-anchor="middle">23:30 睡觉</text>
+
+    <rect x="36" y="706" width="336" height="18" rx="9" fill="#EADCC8"/>
+    <rect x="36" y="706" width="256" height="18" rx="9" fill="#245F74"/>
+    <text x="36" y="748" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16">当前步骤 3 / 5</text>
+
+    <rect x="36" y="688" width="94" height="38" rx="19" fill="#245F74" fill-opacity="0.12"/>
+    <text x="83" y="712" fill="#245F74" font-family="Avenir Next, PingFang SC, sans-serif" font-size="15" font-weight="600" text-anchor="middle">已确认</text>
+  </g>
+</svg>

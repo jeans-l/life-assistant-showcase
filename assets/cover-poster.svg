@@ -1,0 +1,106 @@
+<svg width="1600" height="1100" viewBox="0 0 1600 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="180" y1="80" x2="1380" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF6EE"/>
+      <stop offset="1" stop-color="#EEDFCB"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="420" y1="170" x2="1260" y2="930" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF8" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#FFF7EE" stop-opacity="0.76"/>
+    </linearGradient>
+    <linearGradient id="screenA" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#245F74"/>
+      <stop offset="1" stop-color="#5E91A0"/>
+    </linearGradient>
+    <linearGradient id="screenB" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#D7A252"/>
+      <stop offset="1" stop-color="#E6BE7A"/>
+    </linearGradient>
+    <linearGradient id="screenC" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8EAA8A"/>
+      <stop offset="1" stop-color="#C9DEC1"/>
+    </linearGradient>
+    <filter id="shadow" x="264" y="110" width="1060" height="864" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="36"/>
+      <feGaussianBlur stdDeviation="42"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0784314 0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0.14 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_2"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_2" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1100" rx="48" fill="url(#bg)"/>
+  <circle cx="222" cy="186" r="170" fill="#245F74" fill-opacity="0.12"/>
+  <circle cx="1362" cy="270" r="150" fill="#D7A252" fill-opacity="0.16"/>
+  <circle cx="1230" cy="872" r="210" fill="#8EAA8A" fill-opacity="0.12"/>
+
+  <g filter="url(#shadow)">
+    <rect x="348" y="152" width="904" height="696" rx="42" fill="url(#panel)"/>
+    <text x="424" y="270" fill="#245F74" font-family="Avenir Next, PingFang SC, sans-serif" font-size="18" font-weight="700" letter-spacing="0.18em">LIFE ASSISTANT SHOWCASE</text>
+    <text x="424" y="376" fill="#141313" font-family="Iowan Old Style, Georgia, Songti SC, serif" font-size="82" font-weight="700" letter-spacing="-0.06em">
+      <tspan x="424" dy="0">把“生活决策”做成</tspan>
+      <tspan x="424" dy="92">可被体验的软件。</tspan>
+    </text>
+    <text x="426" y="528" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="28">
+      <tspan x="426" dy="0">从首次建档、今日承接，到单场景决策工作台，</tspan>
+      <tspan x="426" dy="44">这个公开仓只保留产品叙事、静态 demo 和高层架构表达。</tspan>
+    </text>
+
+    <rect x="428" y="612" width="170" height="46" rx="23" fill="#141313"/>
+    <text x="513" y="641" fill="#FFFDF8" font-family="Avenir Next, PingFang SC, sans-serif" font-size="18" font-weight="600" text-anchor="middle">Local-first</text>
+    <rect x="616" y="612" width="210" height="46" rx="23" fill="#245F74" fill-opacity="0.12"/>
+    <text x="721" y="641" fill="#245F74" font-family="Avenir Next, PingFang SC, sans-serif" font-size="18" font-weight="600" text-anchor="middle">Assistant + Skills</text>
+
+    <g transform="translate(944 218)">
+      <g transform="rotate(-9 150 250)">
+        <rect x="0" y="0" width="208" height="430" rx="36" fill="#141313"/>
+        <rect x="12" y="12" width="184" height="406" rx="28" fill="#F7EFE0"/>
+        <rect x="58" y="24" width="92" height="14" rx="7" fill="#E7DAC4"/>
+        <rect x="28" y="64" width="156" height="110" rx="28" fill="url(#screenA)"/>
+        <rect x="28" y="196" width="156" height="22" rx="11" fill="#EEE1CD"/>
+        <rect x="28" y="232" width="100" height="16" rx="8" fill="#D9CAB2"/>
+        <rect x="28" y="276" width="156" height="74" rx="24" fill="#FFFDF8"/>
+        <rect x="40" y="292" width="72" height="12" rx="6" fill="#245F74" fill-opacity="0.18"/>
+        <rect x="40" y="316" width="128" height="10" rx="5" fill="#E6D8C2"/>
+        <rect x="40" y="338" width="98" height="10" rx="5" fill="#EFE4D4"/>
+        <text x="104" y="384" fill="#245F74" font-family="Avenir Next, PingFang SC, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Onboarding</text>
+      </g>
+
+      <g transform="translate(130 62)">
+        <rect x="0" y="0" width="220" height="460" rx="38" fill="#141313"/>
+        <rect x="12" y="12" width="196" height="436" rx="30" fill="#FFF9F1"/>
+        <rect x="62" y="24" width="96" height="14" rx="7" fill="#E7DAC4"/>
+        <rect x="24" y="58" width="172" height="58" rx="24" fill="#FFF4E6"/>
+        <rect x="38" y="78" width="74" height="12" rx="6" fill="#C9BCA8"/>
+        <rect x="140" y="74" width="40" height="24" rx="12" fill="url(#screenB)"/>
+        <rect x="24" y="138" width="172" height="154" rx="30" fill="#141313"/>
+        <rect x="38" y="156" width="148" height="120" rx="24" fill="#FFFDF8"/>
+        <rect x="54" y="176" width="92" height="16" rx="8" fill="#D9CAB2"/>
+        <rect x="54" y="206" width="118" height="12" rx="6" fill="#EDE2D1"/>
+        <rect x="54" y="230" width="74" height="12" rx="6" fill="#EFE4D4"/>
+        <rect x="36" y="318" width="160" height="66" rx="24" fill="#FFFDF8"/>
+        <rect x="52" y="338" width="70" height="12" rx="6" fill="#245F74" fill-opacity="0.18"/>
+        <rect x="52" y="362" width="126" height="10" rx="5" fill="#EDE2D1"/>
+        <text x="110" y="420" fill="#141313" font-family="Avenir Next, PingFang SC, sans-serif" font-size="18" font-weight="700">Focus Today</text>
+      </g>
+
+      <g transform="translate(286 22) rotate(8 104 215)">
+        <rect x="0" y="0" width="208" height="430" rx="36" fill="#141313"/>
+        <rect x="12" y="12" width="184" height="406" rx="28" fill="#F8F3EA"/>
+        <rect x="58" y="24" width="92" height="14" rx="7" fill="#E7DAC4"/>
+        <rect x="28" y="62" width="156" height="72" rx="26" fill="url(#screenC)"/>
+        <rect x="28" y="154" width="156" height="96" rx="28" fill="#FFFDF8"/>
+        <rect x="42" y="172" width="88" height="14" rx="7" fill="#8EAA8A" fill-opacity="0.22"/>
+        <rect x="42" y="198" width="120" height="10" rx="5" fill="#E7DAC8"/>
+        <rect x="42" y="220" width="80" height="10" rx="5" fill="#EFE4D4"/>
+        <rect x="28" y="270" width="156" height="100" rx="28" fill="#141313"/>
+        <rect x="40" y="282" width="132" height="74" rx="22" fill="#FFF9F1"/>
+        <rect x="54" y="300" width="82" height="12" rx="6" fill="#D7A252" fill-opacity="0.3"/>
+        <rect x="54" y="324" width="104" height="10" rx="5" fill="#E9DCC9"/>
+        <text x="104" y="396" fill="#245F74" font-family="Avenir Next, PingFang SC, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Decision Flow</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+<svg width="960" height="1240" viewBox="0 0 960 1240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="100" y1="80" x2="800" y2="1160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF6EE"/>
+      <stop offset="1" stop-color="#EBDCC7"/>
+    </linearGradient>
+    <linearGradient id="focus" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#161514"/>
+      <stop offset="1" stop-color="#35312D"/>
+    </linearGradient>
+    <filter id="shadow" x="180" y="126" width="600" height="968" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="34"/>
+      <feGaussianBlur stdDeviation="36"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0784314 0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0.15 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_2"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_2" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="1240" rx="40" fill="url(#bg)"/>
+  <circle cx="770" cy="196" r="118" fill="#245F74" fill-opacity="0.12"/>
+  <circle cx="176" cy="922" r="144" fill="#D7A252" fill-opacity="0.14"/>
+
+  <text x="128" y="120" fill="#245F74" font-family="Avenir Next, PingFang SC, sans-serif" font-size="26" font-weight="700" letter-spacing="0.16em">PATH 02</text>
+  <text x="128" y="186" fill="#141313" font-family="Iowan Old Style, Georgia, Songti SC, serif" font-size="64" font-weight="700" letter-spacing="-0.05em">Today</text>
+  <text x="128" y="238" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="26">首页只接住当下最该处理的一件事。</text>
+
+  <g filter="url(#shadow)" transform="translate(278 174)">
+    <rect width="404" height="788" rx="54" fill="#141313"/>
+    <rect x="16" y="16" width="372" height="756" rx="40" fill="#F8F2E7"/>
+    <rect x="126" y="24" width="152" height="18" rx="9" fill="#E7DAC4"/>
+
+    <text x="42" y="88" fill="#8B8378" font-family="Avenir Next, PingFang SC, sans-serif" font-size="18">4月10日</text>
+    <text x="42" y="132" fill="#141313" font-family="Iowan Old Style, Georgia, Songti SC, serif" font-size="42" font-weight="700">周五</text>
+    <rect x="280" y="66" width="84" height="38" rx="19" fill="#FFF8EA"/>
+    <text x="322" y="90" fill="#C78D36" font-family="Avenir Next, PingFang SC, sans-serif" font-size="15" font-weight="700" text-anchor="middle">24°C</text>
+
+    <rect x="36" y="158" width="332" height="94" rx="28" fill="#FFFDF8"/>
+    <text x="58" y="194" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16">今天的节奏</text>
+    <text x="58" y="230" fill="#141313" font-family="Avenir Next, PingFang SC, sans-serif" font-size="24" font-weight="600">上午比较稳，午间事项还在确认。</text>
+
+    <rect x="36" y="280" width="332" height="242" rx="34" fill="url(#focus)"/>
+    <text x="58" y="322" fill="#E8DDD0" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16">当前事项</text>
+    <text x="58" y="380" fill="#FFFDF8" font-family="Iowan Old Style, Georgia, Songti SC, serif" font-size="40" font-weight="700">午餐</text>
+    <text x="58" y="420" fill="#D7CABB" font-family="Avenir Next, PingFang SC, sans-serif" font-size="18">想吃热一点的，最好 30 分钟内送到。</text>
+    <rect x="58" y="452" width="106" height="38" rx="19" fill="#245F74"/>
+    <rect x="176" y="452" width="124" height="38" rx="19" fill="#FFFDF8" fill-opacity="0.12"/>
+    <text x="111" y="476" fill="#FFFDF8" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16" font-weight="600" text-anchor="middle">继续处理</text>
+    <text x="238" y="476" fill="#FFFDF8" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16" font-weight="600" text-anchor="middle">交给 assistant</text>
+
+    <rect x="36" y="548" width="332" height="84" rx="28" fill="#FFFDF8"/>
+    <text x="58" y="580" fill="#245F74" font-family="Avenir Next, PingFang SC, sans-serif" font-size="16" font-weight="700">下一个跟进</text>
+    <text x="58" y="616" fill="#141313" font-family="Avenir Next, PingFang SC, sans-serif" font-size="22" font-weight="600">15:00 前整理周报</text>
+
+    <rect x="36" y="658" width="332" height="48" rx="24" fill="#141313"/>
+    <text x="72" y="688" fill="#FFFDF8" font-family="Avenir Next, PingFang SC, sans-serif" font-size="17">继续问我今天该怎么安排</text>
+    <circle cx="336" cy="682" r="16" fill="#245F74"/>
+    <path d="M330 682H342M336 676V688" stroke="#FFFDF8" stroke-width="2.5" stroke-linecap="round"/>
+
+    <rect x="36" y="724" width="332" height="28" rx="14" fill="#EFE3D2"/>
+    <rect x="36" y="724" width="92" height="28" rx="14" fill="#141313"/>
+    <rect x="148" y="724" width="92" height="28" rx="14" fill="#FFFDF8"/>
+    <rect x="260" y="724" width="108" height="28" rx="14" fill="#FFFDF8"/>
+    <text x="82" y="742" fill="#FFFDF8" font-family="Avenir Next, PingFang SC, sans-serif" font-size="13" font-weight="600" text-anchor="middle">今天</text>
+    <text x="194" y="742" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="13" font-weight="600" text-anchor="middle">日程</text>
+    <text x="314" y="742" fill="#5E5A55" font-family="Avenir Next, PingFang SC, sans-serif" font-size="13" font-weight="600" text-anchor="middle">我的</text>
+  </g>
+</svg>
