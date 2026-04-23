@@ -1,0 +1,425 @@
+[
+  {
+    "id": "superbowl-tofu-bowl",
+    "merchant": "超级碗",
+    "brandSlug": "super-bowl",
+    "title": "日式七味豆腐超级碗",
+    "cuisine": "轻食饭碗",
+    "price": 30,
+    "deliveryMinutes": 25,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "light",
+      "rice-bowl",
+      "vegetarian-friendly"
+    ],
+    "dietaryFlags": [
+      "contains-soy"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?auid=1118708041715832&lsp=57879",
+    "fetchedAt": "2026-04-07",
+    "description": "七味豆腐、谷物饭、清爽蔬菜",
+    "explanation": "这份适合想避开重油重肉的时候使用，预算更低、送达也快，作为轻量替换方案很稳定。"
+  },
+  {
+    "id": "superbowl-smoked-chicken-breast-bowl",
+    "merchant": "超级碗",
+    "brandSlug": "super-bowl",
+    "title": "果木烟熏鸡胸超级碗",
+    "cuisine": "轻食饭碗",
+    "price": 35,
+    "deliveryMinutes": 26,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "light",
+      "rice-bowl",
+      "high-protein",
+      "low-oil"
+    ],
+    "dietaryFlags": [
+      "contains-chicken"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F9809EEA2FA2",
+    "fetchedAt": "2026-04-07",
+    "description": "烟熏鸡胸、谷物饭、时蔬拼盘",
+    "explanation": "如果午间想吃得更清爽，这份会比鸡腿肉版本更轻负担，高蛋白标签也更适合下午还要继续开会或赶稿的场景。"
+  },
+  {
+    "id": "superbowl-honey-chicken-bowl",
+    "merchant": "超级碗",
+    "brandSlug": "super-bowl",
+    "title": "蜜汁鸡腿超级碗",
+    "cuisine": "轻食饭碗",
+    "price": 35,
+    "deliveryMinutes": 28,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "balanced",
+      "rice-bowl",
+      "high-protein"
+    ],
+    "dietaryFlags": [
+      "contains-chicken"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?address=Century+Avenue+No.1192+F+LG1+No.A08%2C+Pudong%2C+Shanghai+China&auid=1118653083639759&coordinate=31.22806%2C121.52621&lsp=57879&name=FOODBOWL+Super+Bowl+%28Shanghai+Century+Link+Branch%29",
+    "fetchedAt": "2026-04-07",
+    "description": "鸡腿肉、谷物饭、羽衣甘蓝",
+    "explanation": "这份是工作日午餐里最稳的默认项，鸡腿肉的满足感更强，价格也刚好卡在中档预算内，适合直接确认后继续工作。"
+  },
+  {
+    "id": "chaomoshitang-lemon-chicken-thigh",
+    "merchant": "超模食堂",
+    "brandSlug": "chaomo-shitang",
+    "title": "椒香柠檬烤鸡腿肉",
+    "cuisine": "轻食热食",
+    "price": 32,
+    "deliveryMinutes": 27,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "balanced",
+      "high-protein",
+      "light"
+    ],
+    "dietaryFlags": [
+      "contains-chicken"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?auid=1118785893568737&lsp=57879",
+    "fetchedAt": "2026-04-07",
+    "description": "烤鸡腿肉、彩椒、热蔬菜拼盘",
+    "explanation": "这份保留了鸡腿肉的饱腹感，但整体调味更偏清爽，适合把“想吃点好的”和“下午别太腻”放在一起平衡。"
+  },
+  {
+    "id": "chaomoshitang-shredded-chicken-noodle",
+    "merchant": "超模食堂",
+    "brandSlug": "chaomo-shitang",
+    "title": "柠檬彩椒手撕鸡·轻盈拌川",
+    "cuisine": "轻食拌川",
+    "price": 32,
+    "deliveryMinutes": 26,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "light",
+      "high-protein",
+      "noodle",
+      "low-oil"
+    ],
+    "dietaryFlags": [
+      "contains-chicken",
+      "contains-gluten"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?auid=1118692821110761&lsp=57879",
+    "fetchedAt": "2026-04-07",
+    "description": "手撕鸡、拌川、柠檬彩椒",
+    "explanation": "当你想把米饭换成更轻快的面食口感时，这份是很自然的转向，鸡肉依旧保证蛋白质密度，清爽度也更高。"
+  },
+  {
+    "id": "chaomoshitang-beef-noodle",
+    "merchant": "超模食堂",
+    "brandSlug": "chaomo-shitang",
+    "title": "帕米尔高原纯牛肉·轻盈拌川",
+    "cuisine": "轻食拌川",
+    "price": 36,
+    "deliveryMinutes": 29,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "balanced",
+      "high-protein",
+      "noodle"
+    ],
+    "dietaryFlags": [
+      "contains-beef",
+      "contains-gluten"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?auid=1118785893568737&lsp=57879",
+    "fetchedAt": "2026-04-07",
+    "description": "纯牛肉、拌川、彩蔬热配菜",
+    "explanation": "如果想把默认方案换成更有肉感的版本，这份牛肉拌川会更撑得住下午长时段工作，但仍保留轻食品牌常见的清爽走向。"
+  },
+  {
+    "id": "kfc-old-beijing-wrap",
+    "merchant": "肯德基",
+    "brandSlug": "kfc",
+    "title": "老北京鸡肉卷",
+    "cuisine": "西式快餐",
+    "price": 18,
+    "deliveryMinutes": 22,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "portable",
+      "wrap",
+      "budget-friendly"
+    ],
+    "dietaryFlags": [
+      "contains-chicken",
+      "contains-gluten"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?auid=1117162011729606&lsp=57879",
+    "fetchedAt": "2026-04-07",
+    "description": "鸡肉卷、薄饼卷料、快速解决一餐",
+    "explanation": "当你想保留快餐效率但又不想吃太重的汉堡时，鸡肉卷会是自然过渡项，适合放进备选库里做快切。"
+  },
+  {
+    "id": "kfc-spicy-chicken-burger",
+    "merchant": "肯德基",
+    "brandSlug": "kfc",
+    "title": "香辣鸡腿堡",
+    "cuisine": "西式快餐",
+    "price": 18,
+    "deliveryMinutes": 24,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "portable",
+      "burger",
+      "fried",
+      "budget-friendly"
+    ],
+    "dietaryFlags": [
+      "contains-chicken",
+      "contains-gluten",
+      "spicy",
+      "fried"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?auid=1117162011729606&lsp=57879",
+    "fetchedAt": "2026-04-07",
+    "description": "香辣鸡腿堡、脆皮鸡肉、便携主食",
+    "explanation": "这份适合模拟“今天就想吃点熟悉快餐”的场景，价格友好、出餐快，但会被清淡或低油过滤优先排除。"
+  },
+  {
+    "id": "kfc-new-orleans-burger",
+    "merchant": "肯德基",
+    "brandSlug": "kfc",
+    "title": "新奥尔良烤鸡腿堡",
+    "cuisine": "西式快餐",
+    "price": 18,
+    "deliveryMinutes": 25,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "portable",
+      "balanced",
+      "burger",
+      "budget-friendly"
+    ],
+    "dietaryFlags": [
+      "contains-chicken",
+      "contains-gluten"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?address=Zhongshan+East+1st+Road+No.353%2C+Huangpu%2C+Shanghai+China&auid=1118368795528784&coordinate=31.239794%2C121.490452&lsp=57879&name=KFC+Dessert+Station+%28The+Bund+Branch%29",
+    "fetchedAt": "2026-04-07",
+    "description": "烤鸡腿堡、面包胚、便携午餐",
+    "explanation": "如果你中午需要边走边吃或不想等太久，堡类会是最省心的快餐分支，这份也比炸鸡汉堡更稳妥一些。"
+  },
+  {
+    "id": "laoxiangji-farmhouse-stir-fry",
+    "merchant": "老乡鸡",
+    "brandSlug": "laoxiangji",
+    "title": "农家小炒肉",
+    "cuisine": "中式快餐",
+    "price": 15,
+    "deliveryMinutes": 27,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "comfort",
+      "rice-bowl",
+      "budget-friendly"
+    ],
+    "dietaryFlags": [
+      "contains-pork",
+      "spicy"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?auid=1118415743333402&lsp=57879",
+    "fetchedAt": "2026-04-07",
+    "description": "小炒肉、米饭搭配、下饭辣椒",
+    "explanation": "如果今天更需要熟悉感和下饭感，这份会比轻食更像传统工作餐，价格也非常友好，适合模拟“便宜但满足”的分支。"
+  },
+  {
+    "id": "laoxiangji-edamame-chicken",
+    "merchant": "老乡鸡",
+    "brandSlug": "laoxiangji",
+    "title": "经典毛豆烧鸡",
+    "cuisine": "中式快餐",
+    "price": 16,
+    "deliveryMinutes": 29,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "comfort",
+      "high-protein",
+      "budget-friendly"
+    ],
+    "dietaryFlags": [
+      "contains-chicken"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?address=Jiufeng+Road+No.118+Pinggao+Plaza+F1+No.101-24+Store%2C+Songjiang%2C+Shanghai+China&auid=1118714017095585&coordinate=31.016229%2C121.230861&lsp=57879&name=Home+Original+Chicken+%28Shanghai+Pinggao+Plaza+Branch%29",
+    "fetchedAt": "2026-04-07",
+    "description": "毛豆烧鸡、热菜搭配、家常米饭",
+    "explanation": "它适合扮演“想吃点热乎的但预算别超”的候选，价格低、风味熟悉，也方便和轻食类候选形成明显对比。"
+  },
+  {
+    "id": "laoxiangji-white-cut-chicken",
+    "merchant": "老乡鸡",
+    "brandSlug": "laoxiangji",
+    "title": "白切鸡",
+    "cuisine": "中式快餐",
+    "price": 20,
+    "deliveryMinutes": 28,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "balanced",
+      "high-protein",
+      "comfort"
+    ],
+    "dietaryFlags": [
+      "contains-chicken"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?auid=1118415743333402&lsp=57879",
+    "fetchedAt": "2026-04-07",
+    "description": "白切鸡、热配菜、家常风味",
+    "explanation": "这份比重口炒菜更克制，保留了中式热饭的稳定感，同时蛋白质更清晰，适合作为从轻食切回中餐时的中间选项。"
+  },
+  {
+    "id": "maitian-chicken-soba-noodle",
+    "merchant": "麦田归来",
+    "brandSlug": "maitian-guilai",
+    "title": "秘制鸡胸低脂荞麦拌面",
+    "cuisine": "轻食拌面",
+    "price": 24,
+    "deliveryMinutes": 22,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "light",
+      "high-protein",
+      "noodle",
+      "budget-friendly",
+      "low-oil"
+    ],
+    "dietaryFlags": [
+      "contains-chicken",
+      "contains-gluten"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?auid=1118527582761819&lsp=57879",
+    "fetchedAt": "2026-04-07",
+    "description": "鸡胸肉、荞麦面、轻油拌料",
+    "explanation": "这份更适合需要“清淡一点但不要只有菜”的午间诉求，价格低、到达快，也方便在模拟里承担轻量替换角色。"
+  },
+  {
+    "id": "maitian-chicken-egg-bowl",
+    "merchant": "麦田归来",
+    "brandSlug": "maitian-guilai",
+    "title": "嫩滑蛋羹·鸡胸肉·杂粮拌饭",
+    "cuisine": "轻食拌饭",
+    "price": 25,
+    "deliveryMinutes": 24,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "light",
+      "high-protein",
+      "rice-bowl",
+      "budget-friendly"
+    ],
+    "dietaryFlags": [
+      "contains-chicken",
+      "contains-egg"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?auid=1118527582761819&lsp=57879",
+    "fetchedAt": "2026-04-07",
+    "description": "鸡胸肉、嫩蛋羹、杂粮饭",
+    "explanation": "这份是低预算高蛋白里最像工作日午餐解法的一档，价格友好、口感也不至于太干，非常适合模拟“默认就吃这个”的路径。"
+  },
+  {
+    "id": "maitian-chicken-grain-bowl",
+    "merchant": "麦田归来",
+    "brandSlug": "maitian-guilai",
+    "title": "鸡胸肉杂粮拌饭",
+    "cuisine": "轻食拌饭",
+    "price": 26,
+    "deliveryMinutes": 23,
+    "mealSlot": "lunch",
+    "city": "上海",
+    "locationTag": "office-lunch",
+    "tags": [
+      "workday",
+      "balanced",
+      "high-protein",
+      "rice-bowl",
+      "budget-friendly"
+    ],
+    "dietaryFlags": [
+      "contains-chicken"
+    ],
+    "candidateSource": "local-md",
+    "simulationMode": "menu-snapshot",
+    "sourceUrl": "https://maps.apple.com/place?auid=1118527582761819&lsp=57879",
+    "fetchedAt": "2026-04-07",
+    "description": "鸡胸肉、杂粮饭、基础时蔬",
+    "explanation": "相比带蛋羹版本，这份更像朴素稳定的默认饭碗，结构简单、好理解，适合作为预算更紧时的基线候选。"
+  }
+]

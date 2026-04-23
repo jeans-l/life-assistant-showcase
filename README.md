@@ -1,94 +1,67 @@
 # Life Assistant Showcase
 
-> 一个面向个人生活决策的 AI 助理原型，尝试把“有人替我做复杂生活决策”变成可验证的软件体验。
+> 一个基于记忆的个人 AI 决策助手 public showcase，尝试把 AI 从 `search / recommend` 推进一步，变成对日常生活决策与执行的默认承接。
 
-![Life Assistant Cover](./assets/cover-poster.svg)
+> Source lineage
+> - 主体内容收敛自主项目 `生活助理` 的 `docs/prd/README.md`、`docs/prd/vision.md`、`docs/prd/v1-commitment-and-non-goals.md` 与 `docs/ui-ux/app-设计规范.md`
+> - 静态预览页直接来自主项目 `demo/**`
+> - 本仓只保留 public-safe 的产品、架构与 demo 表达，不包含正式 runtime 实现
 
-> 核心实现与业务代码保留在私有仓；本仓库用于展示产品设计、系统思路与可验证 demo。  
-> 当前公开内容只保留对外叙事、静态演示和高层架构说明，不包含正式 runtime contract、私有 provider 接入细节或完整业务实现。
+[Demo Navigator](./demo/index.html) · [Vision](./VISION.md) · [Product](./PRODUCT.md) · [Architecture](./ARCHITECTURE.md) · [Demo Notes](./DEMO.md)
 
-## 项目简介
+## 一句话愿景
 
-生活助理不是一个“更会聊天”的通用机器人，而是一个围绕个人日常决策构建的 AI 助理原型。它关注的不是单次问答，而是持续理解用户的稳定偏好、时间节奏和场景约束，并在低风险任务中给出默认判断，在需要时把复杂度自然承接到界面和工作流里。
+生活助理想做的不是一个更会聊天的 AI，而是一个真正面向个人生活的助理系统：长期理解你，在合适的时间给出默认方案，在治理边界成立时继续承接执行与写回。
 
-这个展示仓保留了项目对外最重要的三个层面：
+## 为什么这件事成立
 
-- 产品判断：为什么“生活决策”会是 AI 时代值得重做的一层
-- 系统思路：如何用 `local-first + assistant host + skill` 建立可信的执行边界
-- 可验证体验：如何把 onboarding、日常注意力收敛和单场景决策做成能被演示的产品路径
+过去二十年，软件把“获取信息”和“获得选项”做得越来越高效，但普通人的决策负担并没有一起下降。真正持续消耗精力的，往往不是信息不存在，而是选项太多、约束太碎、事情太频繁，导致日常判断本身变成了负担。
 
-## 核心亮点
+主项目的核心判断很明确：AI 的下一阶段，不应该只停留在 `search / recommend`，而应该进一步进入 `decision-making / execution`。从这个角度看，生活助理不是在做一个更强的聊天入口，而是在尝试把“持续获得专业判断”这件事，从少数人的昂贵配置变成大众可获得的基础设施。
 
-- `Local-first` 的数据与信任边界：稳定信息优先留在本地，公开演示不依赖私有后端或隐藏密钥。
-- `Assistant Host + Skills` 的扩展结构：assistant 负责理解、治理和写回，具体能力以 skill 方式接入。
-- 可被讲清楚的产品化原型：不是只展示概念，而是把 onboarding、今日承接和午餐决策做成完整链路。
+## 当前产品证明链
 
-## 关键场景
+当前 public showcase 不讲“全场景 AI 生活自动化”，只讲主项目已经明确在验证的三段证明链：
 
-### 1. 首次进入不是大表单，而是关系建立
+1. [Onboarding Preview](./demo/preview-onboarding.html)：先建立关系与最小激活，而不是先把用户扔进一张长配置表。
+2. [App Shell Preview](./demo/preview-app-tabs.html)：`今天 / 日程 / 角色 / 我的 + 全局 assistant` 共同组成正式舞台，其中 `Today` 负责先接住当下最该处理的一件事。
+3. [Lunch Workbench Preview](./demo/preview-lunch-flow.html)：默认方案、候选切换、继续追问和后续承接落在同一个工作台，而不是散落在一串聊天气泡里。
 
-产品从“先相互了解一下”开始，而不是从配置页开始。公开 demo 里的 onboarding 只收最小必要信息：你是谁、你通常在哪里、你的节奏怎样、助理应该以什么方式与你建立关系。
+这三段链路共同回答的是：关系如何建立、注意力如何收束、默认决策如何被看见和继续推进。
 
-![Onboarding Scene](./assets/scene-onboarding.svg)
+## Harness 摘要
 
-### 2. “今天”页只承接当下最该处理的一件事
+主项目的系统成立方式，不是“一个超级聊天框 + 若干调用”，而是一个有明确治理边界的 Harness：
 
-首页不是信息堆砌，也不是多卡片竞争注意力，而是把当前最需要被接住的一件事放到前面，再决定是原地完成、查看详情，还是交给 assistant 继续处理。
+- assistant 是宿主与治理层，负责路由、上下文装配、结果采纳、正式写回与 surface 承接。
+- skill 是领域能力包，负责进入某个生活领域之后如何形成默认方案、备选方案和解释。
+- provider 是外部能力来源，回答“外部能提供什么候选、能执行什么、能回流什么状态”，不是新的智能主语。
+- 正式写回主权只发生在 governed writeback，也就是主项目文档里的 `writeback_decision`。
 
-![Today Scene](./assets/scene-today.svg)
+这也是为什么生活助理反复强调“它不是聊天首页，不是信息流，也不是插件市场”。更多见 [ARCHITECTURE.md](./ARCHITECTURE.md)。
 
-### 3. 单个决策场景要能看见、能修改、能继续执行
+## Try The Demo
 
-公开 demo 选了“午餐决策”作为代表场景：系统先理解预算、地点、时间和轻量偏好，再给出一份足够稳妥的默认方案，并允许用户继续追问、切换候选或进入执行准备。
+- [Public Demo Navigator](./demo/index.html)
+- [Onboarding Preview](./demo/preview-onboarding.html)
+- [App Shell Preview](./demo/preview-app-tabs.html)
+- [Lunch Workbench Preview](./demo/preview-lunch-flow.html)
+- [Demo Walkthrough](./DEMO.md)
 
-![Decision Scene](./assets/scene-decision.svg)
+## Public Boundary
 
-## 系统思路
+这个仓库包含：
 
-公开仓只保留高层系统表达，不公开内部 contract 和具体实现路径。当前对外口径收敛为四个判断：
+- 从主项目抽取后的愿景、产品和架构 public 叙事
+- 来自主项目最新静态 preview 的对外演示页
+- 一份用于午餐工作台演示的本地 seed 数据 `demo/local-seeds/meal/library.json`
 
-- assistant 是宿主，不是第二个页面系统
-- skill 是能力包，不是新的智能主语
-- writeback 必须受治理，不能绕开宿主直接落库
-- public demo 只展示安全边界内的本地模拟链路
+这个仓库不包含：
 
-![Architecture Overview](./assets/architecture-overview.svg)
+- 完整业务源码与运行时实现
+- 私有 provider、正式 contract、内部 schema、仓库路径映射或调试工作台
+- 任何依赖私有环境才能跑通的后端链路
 
-更多说明见 [ARCHITECTURE.md](./ARCHITECTURE.md)。
+## 视觉说明
 
-## 当前状态
-
-- 已整理为独立的对外展示仓结构，可单独初始化为新的 public repo
-- 已包含静态展示页 `demo/index.html`，用于快速演示产品路径与系统思路
-- 已包含 `VISION / DEMO / ARCHITECTURE` 三份公开文档，口径统一且去内部化
-- 演示内容使用静态和本地模拟数据，不连接真实 provider、不暴露真实 endpoint
-
-## 演示入口
-
-- 静态展示页：[demo/index.html](./demo/index.html)
-- 产品方向：[VISION.md](./VISION.md)
-- 体验路径：[DEMO.md](./DEMO.md)
-- 高层架构：[ARCHITECTURE.md](./ARCHITECTURE.md)
-- 发布说明：[PUBLISHING.md](./PUBLISHING.md)
-
-如果把这个目录单独发布为新仓库，建议将 `demo/` 直接部署到 GitHub Pages 或 Vercel，再把线上地址补回本节。
-
-## 负责范围
-
-- 产品定位与长期 vision
-- App 信息架构与关键路径设计
-- 助理宿主、skill 边界与写回治理思路
-- React / PWA / Capacitor 原型与本地交付验证
-- 对外展示层的文案、视觉叙事与静态演示整理
-
-## 技术栈
-
-原型主工程围绕以下技术构建：
-
-- `React`
-- `TypeScript`
-- `Vite`
-- `PWA`
-- `Capacitor`
-
-这个公开仓只保留展示层，不尝试公开完整主工程实现。
+本仓当前优先保留“可打开的静态 preview 页面”，而不是用旧 SVG 假装真实产品截图。后续如果补入正式截图，会优先替换 README 主视觉；在此之前，`demo/*.html` 才是最贴近主项目当前表达的公开视觉材料。
