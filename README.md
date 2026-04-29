@@ -1,67 +1,404 @@
-# Life Assistant Showcase
+# Personal Life Assistant
 
-> 一个基于记忆的个人 AI 决策助手 public showcase，尝试把 AI 从 `search / recommend` 推进一步，变成对日常生活决策与执行的默认承接。
+> An AI-native personal assistant prototype for everyday decisions and execution.  
+> Not a calendar app. Not a chatbot. A memory-based decision and execution harness for personal life.
 
-> Source lineage
-> - 主体内容收敛自主项目 `生活助理` 的 `docs/prd/README.md`、`docs/prd/vision.md`、`docs/prd/v1-commitment-and-non-goals.md` 与 `docs/ui-ux/app-设计规范.md`
-> - 静态预览页直接来自主项目 `demo/**`
-> - 本仓只保留 public-safe 的产品、架构与 demo 表达，不包含正式 runtime 实现
+生活助理是一个 AI-native 个人生活助理产品原型。
 
-[Demo Navigator](./demo/index.html) · [Vision](./VISION.md) · [Product](./PRODUCT.md) · [Architecture](./ARCHITECTURE.md) · [Demo Notes](./DEMO.md)
+它不是一个更会聊天的 AI，也不是一个更漂亮的日程工具，而是尝试把 **Memory、当前上下文、可调用 Skill、外部服务和页面写回** 组织成一条完整的个人决策链路：
 
-## 一句话愿景
+```text
+目标 → 约束 → 决策 → 执行 → 反馈 → 学习
+```
 
-生活助理想做的不是一个更会聊天的 AI，而是一个真正面向个人生活的助理系统：长期理解你，在合适的时间给出默认方案，在治理边界成立时继续承接执行与写回。
+核心问题是：
 
-## 为什么这件事成立
+> 当 AI 不再只是回答问题，而是能理解用户长期偏好、当天状态和历史反馈时，用户是否愿意把一部分高频、低风险、重复性的生活决策委托给 AI 助理？
 
-过去二十年，软件把“获取信息”和“获得选项”做得越来越高效，但普通人的决策负担并没有一起下降。真正持续消耗精力的，往往不是信息不存在，而是选项太多、约束太碎、事情太频繁，导致日常判断本身变成了负担。
+---
 
-主项目的核心判断很明确：AI 的下一阶段，不应该只停留在 `search / recommend`，而应该进一步进入 `decision-making / execution`。从这个角度看，生活助理不是在做一个更强的聊天入口，而是在尝试把“持续获得专业判断”这件事，从少数人的昂贵配置变成大众可获得的基础设施。
+## Product Preview
 
-## 当前产品证明链
+<p align="center">
+  <img src="./assets/screenshots/首页-1.png" width="180" />
+  <img src="./assets/screenshots/日程-1.png" width="180" />
+  <img src="./assets/screenshots/角色-1.png" width="180" />
+  <img src="./assets/screenshots/我的-1.png" width="180" />
+  <img src="./assets/screenshots/chat-半屏.png" width="180" />
+</p>
 
-当前 public showcase 不讲“全场景 AI 生活自动化”，只讲主项目已经明确在验证的三段证明链：
+---
 
-1. [Onboarding Preview](./demo/preview-onboarding.html)：先建立关系与最小激活，而不是先把用户扔进一张长配置表。
-2. [App Shell Preview](./demo/preview-app-tabs.html)：`今天 / 日程 / 角色 / 我的 + 全局 assistant` 共同组成正式舞台，其中 `Today` 负责先接住当下最该处理的一件事。
-3. [Lunch Workbench Preview](./demo/preview-lunch-flow.html)：默认方案、候选切换、继续追问和后续承接落在同一个工作台，而不是散落在一串聊天气泡里。
+## Why This Exists
 
-这三段链路共同回答的是：关系如何建立、注意力如何收束、默认决策如何被看见和继续推进。
+过去的工具大多解决两类问题：
 
-## Harness 摘要
+```text
+Calendar app: 帮你记录要做什么
+Chat app: 回答你问了什么
+Recommendation app: 给你一组选项
+```
 
-主项目的系统成立方式，不是“一个超级聊天框 + 若干调用”，而是一个有明确治理边界的 Harness：
+但真实生活里的大量问题不是“缺少信息”，而是：
 
-- assistant 是宿主与治理层，负责路由、上下文装配、结果采纳、正式写回与 surface 承接。
-- skill 是领域能力包，负责进入某个生活领域之后如何形成默认方案、备选方案和解释。
-- provider 是外部能力来源，回答“外部能提供什么候选、能执行什么、能回流什么状态”，不是新的智能主语。
-- 正式写回主权只发生在 governed writeback，也就是主项目文档里的 `writeback_decision`。
+```text
+选项太多
+决策成本太高
+每次都要重新解释偏好
+做完之后系统不会真的变聪明
+```
 
-这也是为什么生活助理反复强调“它不是聊天首页，不是信息流，也不是插件市场”。更多见 [ARCHITECTURE.md](./ARCHITECTURE.md)。
+生活助理想解决的是：
 
-## Try The Demo
+```text
+我是谁
+我现在处在什么状态
+这件事真正要推进什么
+哪些约束必须被尊重
+现在是否适合行动
+结果应该写回哪里
+反馈如何影响下一次判断
+```
 
-- [Public Demo Navigator](./demo/index.html)
-- [Onboarding Preview](./demo/preview-onboarding.html)
-- [App Shell Preview](./demo/preview-app-tabs.html)
-- [Lunch Workbench Preview](./demo/preview-lunch-flow.html)
-- [Demo Walkthrough](./DEMO.md)
+所以这个项目的核心不是 Chat，而是一个面向个人生活的 **AI Decision & Execution Harness**。
 
-## Public Boundary
+---
 
-这个仓库包含：
+## Product Thesis
 
-- 从主项目抽取后的愿景、产品和架构 public 叙事
-- 来自主项目最新静态 preview 的对外演示页
-- 一份用于午餐工作台演示的本地 seed 数据 `demo/local-seeds/meal/library.json`
+### 1. AI App should not stop at chat
 
-这个仓库不包含：
+Chat 是入口，但不是最终形态。真正的个人 AI 助理应该能同时承接用户自然语言输入、页面直接操作、时间窗口触发、外部服务状态回流，以及周期性的记忆纠偏。这些入口不应该形成多套割裂系统，而应进入同一条 assistant runtime 主链。
 
-- 完整业务源码与运行时实现
-- 私有 provider、正式 contract、内部 schema、仓库路径映射或调试工作台
-- 任何依赖私有环境才能跑通的后端链路
+### 2. The core object is not message, but item
 
-## 视觉说明
+生活助理正式接住的不是一条聊天消息，而是一件 `Item / 事项`。一件事项不是简单日程，也不是页面卡片，而是一个可以被持续推进、调整、执行和写回的生活对象。
 
-本仓当前优先保留“可打开的静态 preview 页面”，而不是用旧 SVG 假装真实产品截图。后续如果补入正式截图，会优先替换 README 主视觉；在此之前，`demo/*.html` 才是最贴近主项目当前表达的公开视觉材料。
+例如“午餐”这件事，可能包含：
+
+```text
+目标：解决今天午餐
+时间窗：11:30 - 13:00
+约束：轻一点、预算 50 元内、不要太油
+当前状态：准备中
+领域方案：轻食鸡胸能量碗
+外部服务：外卖服务商
+用户动作：确认 / 调整 / 晚点提醒
+反馈：以后午餐别太冷
+```
+
+### 3. NOW is attention, not dashboard
+
+`NOW` 不是完整首页信息流，也不是日程列表。它只回答一个问题：
+
+> 现在最该关注什么？
+
+完整时间结构交给 `日程`；长期偏好和控制权交给 `我的`；领域能力管理交给 `角色`；复杂判断、跨页协调和自然语言请求交给 `全局助理`。
+
+### 4. Skill is capability, not persona
+
+`Skill` 不是一堆拟人化智能体。
+
+```text
+Assistant 负责判断、协调、治理和写回
+Skill 负责提供领域能力和领域结果
+Provider 负责外部候选、执行和状态回流
+Page 负责展示、编辑、确认和承接
+```
+
+用户可以在 `角色` 页看到 Skill、启用 Skill、暂停 Skill、调整 Skill 偏好。但 Skill 不直接拥有页面写回主权。
+
+### 5. Writeback matters more than generation
+
+AI 助理真正进入生活，不是因为它能生成更自然的回答，而是因为它知道：哪些结果可以写入日程，哪些偏好只能先作为候选，哪些反馈应该更新今天状态，哪些长期记忆需要确认后才能提升，哪些结果只能留在聊天里。
+
+```text
+candidate → writeback decision → memory / item / projection → return sync
+```
+
+所有 Skill、页面、外部服务只能提供候选或建议，最终写回由 Assistant Runtime 统一裁决。
+
+---
+
+## Product Surface
+
+移动端主导航固定为四个页面：
+
+```text
+NOW / 日程 / 角色 / 我的
+```
+
+全局助理不是第五个 Tab，而是所有页面共享的输入与对话层。
+
+### NOW
+
+`NOW` 是当前注意力收敛页。它展示日期、地点、天气、当前最重要的一件事、默认方案、少量快捷动作和全局 assistant 输入框。
+
+典型场景：现在接近午餐窗口，系统根据时间、地点、偏好和历史反馈给出一个默认午餐方案，用户可以确认，也可以快速调整。
+
+### Schedule
+
+`日程` 是完整时间组织页，负责日期、全天区、时间栅格、事件块、新建、查看、编辑、删除，以及“调整今天”“找空档”等 assistant 请求。
+
+它回答的是：今天和接下来怎么排？
+
+### Role
+
+`角色` 是 Skill 的用户可理解包装。它负责展示内置 Skill、展示 Skill 状态、进入 Skill 详情、进入 Skill 设置、启用或暂停某个 Skill。
+
+P0 内置三个 Skill：
+
+```text
+饮食助手
+News 简报
+学习助手
+```
+
+初始状态不默认启用任何 Skill。
+
+### Me
+
+`我的` 是长期默认、偏好、记忆、依据和控制权中心。它回答：系统怎么看我？系统记住了什么？我可以怎么改？最近一次判断依据是什么？
+
+### Global Assistant
+
+全局助理是跨页面建议、判断、执行和写回层。它支持页面底部低打扰输入框、半屏 conversation、全屏 conversation、来源页面上下文带入，以及任务完成后的返回同步。
+
+P0 对话内容先保持简单：纯文字消息、执行中状态、快捷回复、结果摘要、失败或权限阻断提示。
+
+---
+
+## Core Loop
+
+生活助理的核心运行链路可以压缩成：
+
+```text
+Trigger
+→ Route & Context Assembly
+→ Execution Mode
+→ Writeback Decision
+→ Return Sync
+→ Correction
+```
+
+Trigger 可以来自用户输入、用户直接编辑、时间窗口、外部服务状态、通知点击、周期纠偏、重大任务前回看。
+
+Execution Mode 包括：
+
+```text
+Chat Mode
+Behavior Mode
+Correction Mode
+```
+
+三者不是三套系统，而是统一 runtime 主链中的不同执行方式。
+
+---
+
+## System Architecture
+
+项目采用一个核心架构判断：
+
+> Assistant 是宿主，Skill 是插件化能力包，Provider 是外部能力来源，Memory + Item 是真源，Writeback Decision 是唯一正式写回主权。
+
+简化结构：
+
+```text
+Presentation Shell
+  NOW / Schedule / Role / Me / Assistant Surface
+        ↓
+Application Use Cases
+        ↓
+Client Assistant Gateway
+        ↓
+Assistant Host Kernel
+        ↓
+Skill Runtime / Provider Registry / Writeback Engine
+        ↓
+Memory / Item / Schedule / Projection
+```
+
+长期目标是形成双容器模型：
+
+```text
+Assistant Container
+  - route
+  - context assembly
+  - policy
+  - writeback
+  - return sync
+
+Skill Container
+  - manifest
+  - capability
+  - proposal
+  - provider requirements
+  - surface contribution
+```
+
+Skill 可以是 Local Sandbox Skill 或 Remote Hosted Skill。但无论 Skill 如何执行，都不能绕过 Assistant Host 直接写入 memory、item 或页面 projection。
+
+---
+
+## Demo Walkthrough
+
+P0 Demo 不追求全功能，而是展示核心闭环。
+
+### Demo 1: NOW Default Decision
+
+```text
+打开 NOW
+→ 看到当前焦点：午餐
+→ 系统给出默认午餐方案
+→ 用户点击确认
+→ NOW 主卡状态更新
+```
+
+展示当前事项收敛、默认决策、低摩擦确认和页面写回。
+
+### Demo 2: Schedule Adjustment via Assistant
+
+```text
+进入日程页
+→ 点击午餐事件
+→ 输入“帮我把午餐晚一点”
+→ assistant 半屏打开
+→ 带入当前事件上下文
+→ 给出 12:30 / 13:00 / 先不改
+→ 用户选择
+→ 返回日程页
+→ 事件块时间更新
+```
+
+展示页面上下文带入、半屏 Chat、用户确认后写回和 Return Sync。
+
+### Demo 3: Skill Setup
+
+```text
+进入角色页
+→ 看到饮食助手状态为待设置
+→ 进入饮食助手设置
+→ 设置口味、预算、忌口、常用时间
+→ 保存并启用
+→ 回到角色页
+→ 状态变为已启用
+```
+
+展示 Skill 是可治理能力，不是拟人化角色。
+
+### Demo 4: Memory & Recent Decision
+
+```text
+进入我的
+→ 打开最近判断
+→ 查看为什么推荐当前午餐
+→ 用户反馈“以后午餐别太冷”
+→ 系统记录为候选偏好
+→ 后续同类判断可读取
+```
+
+展示系统会解释、纠正和学习。
+
+---
+
+## What P0 Does Not Do
+
+P0 Demo 暂不做：真实外卖下单、复杂 Skill 市场、三方 Skill 分发、高风险自动执行、常驻后台 agent、多 Skill 自动协作面板、聊天内复杂卡片和复杂表单。
+
+P0 只验证一件事：
+
+> 用户是否愿意把高频、低风险、重复性的生活决策交给 AI 助理做默认判断，并通过反馈让系统持续变好。
+
+---
+
+## Roadmap
+
+### P0: Core Experience
+
+```text
+NOW 当前事项
+日程时间结构
+角色 / Skill 管理
+我的 / Memory 与设置
+全局 assistant 半屏 / 全屏
+饮食助手主链路
+Demo 数据与本地状态写回
+```
+
+### P1: Stronger Skills & Services
+
+```text
+更完整的 MealSkill
+NewsSkill 主动摘要
+LearningSkill 学习计划
+更完整的服务接入
+更丰富的最近判断
+更强的日程冲突处理
+```
+
+### P2: Extensible Assistant Platform
+
+```text
+Skill marketplace
+Remote hosted skill
+Provider ecosystem
+Minimal control plane
+Cross-skill insight
+Advanced memory correction
+Personal automation workflows
+```
+
+---
+
+## Repository Structure
+
+```text
+personal-life-assistant/
+├─ README.md
+├─ docs/
+│  ├─ 00-vision.md
+│  ├─ 01-product-thesis.md
+│  ├─ 02-demo-walkthrough.md
+│  ├─ 03-app-ux.md
+│  ├─ 04-assistant-runtime-and-architecture.md
+│  └─ 05-roadmap-and-investor-note.md
+├─ demo/
+│  ├─ fixtures/
+│  └─ README.md
+├─ design/
+│  ├─ screens/
+│  └─ ui-guidelines.md
+├─ architecture/
+│  ├─ diagrams/
+│  ├─ runtime-loop.md
+│  ├─ memory-item-skill.md
+│  └─ plugin-skill-model.md
+└─ assets/
+   └─ screenshots/
+```
+
+---
+
+## Who This Is For
+
+### For users
+
+This project explores whether AI can become a real personal assistant for daily life, not just a conversational tool.
+
+### For builders
+
+This repo provides a product and architecture reference for building AI-native apps with memory, skills, external providers, and governed writeback.
+
+### For investors
+
+This prototype explores a larger product direction:
+
+> AI as decision infrastructure for personal life.
+
+The long-term opportunity is not another chatbot. It is a trusted personal operating layer that helps people make and execute everyday decisions with less friction.
+
+---
+
+## One-line Summary
+
+Personal Life Assistant is a memory-based AI decision and execution harness for everyday life — turning goals, constraints, skills, services, feedback, and learning into one governed assistant runtime.
